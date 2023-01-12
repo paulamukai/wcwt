@@ -20,8 +20,8 @@ votes = []
 ratings = []
 
 
-for paage in pages:
-  response = get("https://imdb.com/search,title?genres=sci-fi&" + "start=" + str(page) + "&explore=title_type,genres&ref_=adv_prv",headers=headers)
+for page in pages:
+  response = get("https://imdb.com/search/title?genres=sci-fi&" + "start=" + str(page) + "&explore=title_type,genres&ref_=adv_prv",headers=headers)
 
   sleep(randint(8,15))
   if response.status_code != 200:
